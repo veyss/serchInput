@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+    color: #333;
+    text-decoration: none;
+}
+.v-main {
+  background: url("./assets/bigdata.png") no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+ 
+}
+.v-center{
+ position: absolute;
+ top:40%;
+ left:25%;
+
+}
+
+.v-form{  
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  height: 6vh;
+  width: 50vw; 
+  margin-bottom: 5px;
+
+ 
+}
+.v-form .searchinput{
+  height: 100%;
+  width: 90%;
+  background-color: white;
+  border: 2px solid turquoise;
+  padding: 0px 3%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  
+}
+.v-form button{
+  width: 10%;
+  height: 100%;
+  background-color: turquoise;
+  border-radius: 5px;
+  border: 2px solid turquoise;
+}
+.v-form button:hover{
+background-color: transparent;
+}
+.d_none {
+  display: none;
+}
+.titles{
+  position: relative;
+  max-height: 40vh;
+  background-color: turquoise;
+  border-radius: 5px;
+  overflow: auto;
+}
+.titles ul {
+  display: flex;
+  flex-direction: column; 
+  margin: 10px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.titles ul li {
+  margin: 3px;
+  padding: 3px 3px 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #00B4CC;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.titles ul li:hover {
+  background-color: #00B4CC;
+}
+
+@media only screen and (max-width: 740px) {
+  .v-center{
+    left:10%
   }
-  to {
-    transform: rotate(360deg);
+  .v-form{
+    width: 100%;
   }
 }
